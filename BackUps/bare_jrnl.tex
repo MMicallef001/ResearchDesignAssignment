@@ -50,6 +50,9 @@
 
 
 \documentclass[journal]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{float}
+
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
@@ -350,8 +353,7 @@
 
 
 \begin{document}
-
-\title{Research Design 2 }
+\title{Research Design II }
 
 \author{Matthew Micallef\\
 Institute Of ICT\\
@@ -404,13 +406,14 @@ Malta College of Arts Science and Technology}
 
 
 
+
 % make the title area
 \maketitle
 
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-The paper goes over the implementation and the testing of Local Binary Patterns Histograms (LBPH) algorithm in a face recognition system. With the aim to use this technology to eliminate the need for the use of a physical key to enter a house.
+The increase of effectiveness of both Artificial intelligence (AI) and Machine learning (ML) have have changed the field of image processing and image recognition.The paper goes over the implementation and the testing of Local Binary Patterns Histograms (LBPH) algorithm in a face recognition system. With the aim to use this technology to eliminate the need for the use of a physical key to enter a house. 
 \end{abstract}
 
 % For peer review papers, you can put extra information on the cover
@@ -424,20 +427,134 @@ The paper goes over the implementation and the testing of Local Binary Patterns 
 \IEEEpeerreviewmaketitle
 
 
-
 \section{Introduction}
 
-\IEEEPARstart{T}{he} proposed system uses a Haar cascade classifier to detect faces, a Local Binary Patterns Histograms (LBPH) algorithm for face recognition, and a Raspberry Pi camera for real-time video capturing. The ultimate goal for the research carried out is to evaluate the feasibility of using the above mentioned technologies as a cost-effective and secure home entry solution in replacement of a conventional lock and key.
+\IEEEPARstart{T}{he} proposed system uses a Haar cascade classifier to detect faces, a Local Binary Patterns Histograms (LBPH) algorithm for face recognition, and a Raspberry Pi camera for real-time video capturing. The ultimate goal for the research carried out is to evaluate the feasibility of using the above mentioned technologies as a cost-effective and secure home entry solution in replacement of a conventional lock and key. The rational behind researching this topic is due to flaws with traditional security measures which include, the need for a key, the chance of the key being lost or stolen or even forgotten  in the premise, these flaws all lead to the same scenario the user being unable to enter the home.\\ Facial recognition has been emerging more and more as a technology and should be further investigated in the above use case due to its non-transferability which climates the loss of the key in the traditional security system and also the convenience, the user can never be locked out of the house cause his face now the replacement key is always available. This paper goes through fundamental aspects such as the number of training images required for reliable facial recognition, more over it goes through the effect of using gray scale images.\\
+The paper positions itself within two major areas of studies it basis itself on computer vision and also practical home security solutions, it is set apart from the vast majority of studies that research facial recognition by the use of accessible hardware in this case the raspberry pi four and the raspberry pi camera thus extending to the more cost effective smart home solution rather than a purely academic or high-end applications of facial recognition.\\
+The hypothesis for this research is the integration of a Haar cascade classifier, an LBPH algorithm, and a Raspberry Pi four and Pi camera to potentially create a superior form of entry to unlocking a lock without using a key in the aim of make it being more secure, affordable and user convenient.\\
+\\
 
-\subsection{Subsection Heading Here}
-Subsection text here.
+\subsection{Research Approach}
 
-% needed in second column of first page if using \IEEEpubid
-%\IEEEpubidadjcol
+The research being carried out will follow a systematic approach based on a Research Onion depicted in the appendices [Figure 1]. The Layers to the research oinon are explained below 
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
+\begin{enumerate}
+  \item Research Philosophy: The study concentrates on observable phenomena which utilizes a structured and organised methodology and thus follows a Positivism Philosophy 
+  \item Research Approaches: Due to the study using  established theories and research carried out in the domain of facial recognition and the LBPH algorithm, the paper will follow a Deductive approach.
+  \item Research Strategy: The strategy could be classified as an experiment due to having a devised a system and are adjusting a factor which is the quantity of training images to examine the influence on the system's effectiveness.
+  \item Research Choices: The research adopts a mono-method, by the use of quantitative data gathered from testing the system.
+  \item Time Horizons: The research is conducted over a specific point in time rather than longitudinal and thus being cross-sectional.
+  \item Techniques and Procedures: The data being collected involves testing the facial recognition sysyem under different conditions and collecting statistical data. Data that will investigate the correlation between the number of training images and the systems performance.
+\end{enumerate}
 
+
+
+\section{Literature Review}
+\IEEEPARstart{T}{he} methodology undertaken in this paper is based on the integration and the implementation of different technologies to identify an alternative home entry solution.\\
+
+A Haar cascade classifier is a machine learning object detection method which is used to identify objects in an image or video. This classifier is trained based on both positive and negative images of the object to be recognized. Calculable rectangular features are used to detect the presence of the object being recognized in the image, these are also known as Haar features[1]. The cascading aspect for this classifier refers to a number of increasingly complex classifiers that reject negative samples to primarily focus the processing resources on more promising areas of the image.\\
+
+
+The Local Binary Patterns Histograms (LBPH) algorithm is used in image processing and pattern recognition due to it being a powerful feature extractor, this algorithm is mainly used for facial recognition applications. This algorithm works by comparing each pixel in the image with its neighboring pixels it encodes the resulting relationship into a binary pattern theses patterns can then be used to create histograms that can be used for image comparison and other recognition tasks.A representation of how 
+the LBPH algorithm works can be seen in the below figure (Fig 1).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{./images/Figure1.png}
+    \caption{Conversion of a Gray-scale image to decimal}
+    \label{fig:my_label}
+\end{figure}
+
+A raspberry pi is a small and affordable single board computer. It is based on a Quad core 64-bit ARM-Cortex A72 which runs at 1.5GHz and the model which was used in the research carried out was equipped with 4Gb of RAM. This not only classifies the board as affordable but only has good performing hardware.\\
+
+Their are similar studies that use a raspberry pi for facial recognition, one paper uses a raspberry pi connected to a web cam, passive infrared (PIR) sensor and uses the OpenCV library for image processing, the aim of this study was to use the PIR sensor to identify movement in the room and to trigger the web camera to start transmitting images to a cascade classifier to look for facial features to detect a person[2].\\
+
+Another research paper went into more depth, two models were evaluated for use these are the Haar cascade classifier and also the Histogram of Oriented Gradients (HOG), the evaluation for the Haar model used Adaboost training which selected the best features to form a better classifier. An HOG model uses histograms to represent the distribution of pixel intensities in an image. This algorithm divides the given image into 8 * 8 cells and a histogram for each cell is generated, normalization takes place over a larger 16*16 cell to make the descriptor insensitive to lighting variations. All vectors from each block are concatenated into one vector to form the final HOG feature vector. The latter HOG algorithm explained above was was found to be too computationally intensive for the Raspberry Pi 3 Model B+ and was implemented using a system with an i5 CPU which also deemed to be too computationally intense for [3].\\
+
+A different research paper uses a similar approach to the one that was undertaken it uses a raspberry pi zero a more affordable model by the Pi foundation and a web cam wich although the model is not stated the resolution is said to be more or equal to 720p. A data set of four individual was created with each individual having 10 images in a different environment, the process of creating a trainer file was done through a python script which loaded the images into grayscale and subsequently into a Numpy array. The Haar Cascade frontal face classifier was used to detect a face in the images provided and each image was appended with a respective id. A model was trained using the trainer file generated and the LBPH algorithm being executed on the raspberry pi uses this model for facial recognition. The study also examined the size and loading time for the trainer file by varying the number of images for each of the four users[4].\\
+
+In both the above studies they use Haar classifier although the research carried out by Singh et al, goes a step further to integrate Adaboost which should help to to construct a stronger classifier than that of Negpal et al, the use of the better Raspberry pi 3 should slo make training and facial recognition faster due to the better hardware.\\
+
+in the study carried out by Mladenova et al, a similar approch was taken with the aim to open locker doors in an airport by means of a raspberry pi 3 and the use of a Principal Component Analysis (PCA) as a dimensionality reduction algorithm, this was done in order to simplify the the process of comparing facial images. The algorithm treats each image inputted as a one dimensional feature vector created from the pixel values of the image. PCA reduces the non-informative parts while preserving the most informative aspects of the image this is done to reduce the dimension of the feature vectors. In facial recognition, the use of PCA is known as the Eigenfaces method this involves representing the faces as a smaller collection f the key features, these are said to be the principal components of the collection of face images, this makes the comparison between the faces slightly more computationally manageable[5].\\
+
+When comparing the three main approaches above two of the papers follow a similar flow by the use of a combination of a Convolutional Neural Networks (CNN) and Recurrent Neural Networks (RNN) for face recognition, this approach basis itself on deep learning models which are better able to learn complex patterns in the input data. CNN helps to adaptive and automatically learn spatial hierarchies of features, while RNN helps in learning  temporal dependencies in the data. Although this method of facial recognition gives high accuracy it requires a substantial amount of computational resources and a lot of training data. On the other hand the research carried out by Mladenova et al, uses PCA for feature selection and dimensional reduction. Although this approach is less resource intensive in terms of computational resources, this approach could lead to lower accuracy when compared to the above two research papers discussed above more particularly when it comes to complex patterns in the data set.
+
+The following Conference paper written by Nikita et al, uses a different hardware approach that the four other studies discussed above it uses an Arduino based hardware solution rather than a raspberry pi but ultimately they are both affordable single board computers. The implementation captures a video input stream and uses a motion detection module that is written in MATLAB. if motion is detected the frame that motion was detected on is passed through to a facial detection module also written in MATLAB. if this module identifies facial features, the coordinates of the faces and also the frame is sent to a facial recognition module, which uses the coordinates to extract the faces from the frame. The following toolboxes are used in terms of software imported from MATLAB, the Computer Vision Toolbox, the Statistical Toolbox and the image acquisition tool box.\\
+
+The facial recognition process is based on PCA using the Eigen faces method similar to the approach taken by Mladenova et al, where the system creates a training set of face images, then separates the frames down to individual vectors, A covariance matrix is formed, from which the eigenfaces better known as eigenvectors are derived. The system focuses on the key facial attributes rather than the entire facial data set to be able to best determine the weights of each frame that it is processing. it than uses the weights of the new face image and compares it the weights of the images that it has stored in a database.\\
+
+The Euclidean Distance (ED) method is used for classification, with the maximum threshold set to $4.00 \times 10^{15}$. If the ED difference is greater than the above set threshold the classifier will fail to recognize the individuals identity. The above classifier is given eight images of the user to be trained on compared to the ten images that Negpai et al used.\\
+
+All the implementations given above use a different method and algorithm for facial recognition the first three implementations rely on various deep learning techniques with different loss functions and different data preparation stages. The last two implantation's use a simpler yet still effective method of facial recognition by means of PCA. The dependent factor on choosing any of these implementations relays on the specific computational resources that the system has to offer that the margin of acceptable error rate.\\
+
+A Literature Map is attached in the appendices section [Fig 3] to gather insight of how research was mapped out.
+
+
+\section{Methodology}
+To address the hypothesis these objectives and research questions where identified.\\
+Objectives
+\begin{enumerate}
+  \item To dynamically create a dataset based on facial features.
+  \item To implement an efficient face detection mechanism using Haar cascade classifier.
+  \item To apply an effective facial recognition algorithm using LBPH.
+  \item To determine the optimal number of training images for high accuracy. 
+  \item To evaluate the feasibility and safety of the technology for practical use.
+\end{enumerate}
+Research questions 
+\begin{enumerate}
+  \item What kind of data set is required for detecting faces?
+  \item What algorithm can be used to best distinguish between faces?
+  \item Is there any difference in the confidence levels when increasing the number of images taken for each new individual?
+  \item Is it safe to adopt this technology for the above mentioned use case? 
+\end{enumerate}
+
+The following subsequent stages will be used to carry out the execution of the research paper.
+
+\begin{enumerate}
+  \item The first stage of the Development process would be to gather the initial user data, the data that will be used to train a model with. A mechanism for the user to enter their name is created and a sequence of images is subsequently taken.
+  \item The images are then collected converted to gray scale and saved in a folder structure using a new given id 
+  \item A Haar cascade classifier will then be used to identify weather their is a face in the image or not and the image will than be cropped and the original image taken will be overwritten by the cropped image of the users face.
+  \item An LBPH algorithm will be used to train a model based on the images that were gathered and processed.
+  \item The model will then be automatically be used to start recognizing users that are in front of the raspberry pi camera.
+  \item The model will then be tested with different amounts of training images to understand the correlation between the number of images taken for each new individual.
+  \item A comprehensive review of the results should be undertaken to identify weather or not this implementation can be deployed as a product, due to the known potential for high false positives/negatives that the LBPH model can generate.
+\end{enumerate}
+
+\subsection{Data Set}
+In the context of this implementation, their is no need for a pre-existing data set, the reason being is that the model training is being based on the individuals who have been granted entry to the home. As mentioned above whenever a new user is allowed entry to the home, a number of images are taken and stored the latter being that the images contains a face, upon the images being saved in the particular structure the model will get retrained and the new user will now be recognised by the model in conjunction with the existing users that the model has already been trained on. The above described operation can be executed effortlessly, in the scenario that a user is no longer granted entry to the home, the images of that particular user can be purged and the model can be retrained and as a result the model will no longer recognise the user.
+
+\subsection{Face Trainer}
+To asses the presence of a face in the provided image, the Frontal face  Haar classifier this classifier was chosen for it being fast in execution, having a high accuracy, and minimal false positives. This classifier is trained using a number of different images which includes images with a face vi-sable and without, different skin tones, identifying eyes and facial structure.
+
+\subsection{Facial recognition}
+The Open CV library was chosen for it being open-source and has three built in facial recognition algorithms which include the  Eigenfaces, Fisherfaces and the
+LBPH. The LBPH algorithm when compared to the above mentioned algorithms can not only recognise the front of the faces but also the sides of the face which makes this algorithm a better option in this particular use case.
+
+\subsection{Number of images}
+The number of images used in the initial stage of this implementation will be tested to see the affect of the number of images that the LBPH algorithm is trained on, this would be done to identify a number of images which offer a high accuracy without sacrificing storage space, also with reducing the number of images that the model is trained on the retraining of the model will be faster given the less images that the model needs to train on both for existing users and the user that is being added.
+
+\subsection{Research Philosophy and Approach}
+The research follows a positive philosophical approach given that Facial recognition is in essence a quantitative problem, involving precise measurements of facial features and characteristics computed through mathematical formulae. Based on this approach the research utilized the deductive approach to establish a hypothesis and test it through the methodology described.
+\\
+The experimental research strategy was used to focus on the correlation between the number of images used for training and the resulting model's accuracy. The mono -method will be used, relying mainly on quantitative data to potentially provide precise, numerical data which is beneficial for statistical analysis in the field of facial recognition.
+\\The above research philosophies were used to fulfil the research objectives outlined above, but to also provide substantiated knowledge to implement facial recognition technology in the given context.
+\subsection{Method of Analysis}
+The performance of the facial recognition model will be assessed based on the confidence level it exhibits when identifying individuals, this method was chosen to mimic the intended task in correctly identifying individuals. By using the confidence level, the model can be assessed based on the correct identification but also on the certainty that the model has in the identification.
+
+\subsection{Ethical Considerations}
+Due to the nature of facial recognition and the need for collecting and analysing potentially sensitive data these ethical considerations are being taken into consoderation 
+
+\begin{enumerate}
+  \item Informed Consent: Before any data is collected the user should be informed and given the option to accept and deny the capturing of their images for the use case.
+  \item Data Protection and Privacy: To ensure data anonymity the user data will be stored based on an id and security measures like data encryption are used 
+  \item Compliance with Regulations: The research will comply with all the relevant data protection regulations such as the General Data Protection Regulation (GDPR) in the European Union. Meaning that the data collected will be processed only for the process of facial recognition and will not be retained for more than necessary.
+\end{enumerate}
+
+
+
+future improvements possible conc
+
+For robust and reliable facial recognition, ensure you collect images under various conditions such as different lighting, angles, expressions, etc.
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -559,15 +676,22 @@ The conclusion goes here.
 
 
 \appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
 
-% you can choose not to have a title for an appendix
-% if you want by leaving the argument blank
-\section{}
-Appendix two text goes here.
+\section*{}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{./images/ResearhOnion.png}
+    \caption{Research Onion}
+    \label{fig:my_label}
+\end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{./images/LiteratureMap.png}
+    \caption{Research Onion}
+    \label{fig:my_label}
+\end{figure}
 % use section* for acknowledgment
 \section*{Acknowledgment}
 
@@ -624,22 +748,8 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 %\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
 
-\begin{IEEEbiography}{Michael Shell}
-Biography text here.
-\end{IEEEbiography}
 
 % if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{John Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% insert where needed to balance the two columns on the last page with
-% biographies
-%\newpage
-
-\begin{IEEEbiographynophoto}{Jane Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
 
 % You can push biographies down or up by placing
 % a \vfill before or after them. The appropriate
