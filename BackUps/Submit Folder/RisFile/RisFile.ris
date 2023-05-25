@@ -1,0 +1,230 @@
+TY  - JOUR
+ER  - 
+
+TY  - CONF
+TI  - Local Binary Patterns applied to Face Detection and Recognition
+AU  - López, Laura Sánchez
+AB  - Nowadays, applications in the field of surveillance, banking and multimedia equipment are 
+becoming more important, but since each application related to face analysis demands 
+different requirements on the analysis process, almost all algorithms and approaches for face 
+analysis are application dependent and a standardization or generalization is quite difficult. 
+For that reason and since many key problems are still not completely solved, the face analysis 
+research community is still trying to cope with face detection and recognition challenges. 
+Although emulating human vision system would be the ideal solution, it is a heuristic and 
+complicated approach which takes into account multiple clues such as textures, color, motion 
+and even audio information. Therefore, and due to the fast evolution of technology that makes 
+it possible, the recent trend is moving towards multimodal analysis combining multiple 
+approaches to converge to more accurate and satisfactory results. 
+Contributions to specific face detection and recognition applications are helpful to enable the 
+face analysis research community to continue building more robust systems by concatenating 
+different approaches and combining them. Therefore, the aim of this research is to contribute 
+by exploring the Local Binary Patterns operator, motivated by the following reasons. On one 
+hand, it can be applied to face detection and recognition and on the other hand due to its 
+robustness to pose and illumination changes. 
+Local Binary Patterns were first used in order to describe ordinary textures and, since a face 
+can be seen as a composition of micro textures depending on the local situation, it is also 
+useful for face description. The LBP descriptor consists of a global texture and a local texture 
+representation calculated by dividing the image into blocks and computing the texture 
+histogram for each one. The global is used for discriminating the most non-face objects 
+(blocks), whereas the second provides specific and detailed face information which can be 
+used not only to select faces, but also to provide face information for recognition. 
+The results will be concatenated in a general descriptor vector, that will be later used to feed 
+an adequate classifier or discriminative scheme to decide the face likeness of the input image 
+or the identity of the input face in case of face recognition. It is in that stage where this 
+research will focus, first evaluating more simple classification methods and then trying to 
+improve face detection and recognition ratios by trying to eliminate features vector 
+redundancy.
+DA  - 2010/09/01/
+PY  - 2010
+DP  - Semantic Scholar
+UR  - https://www.semanticscholar.org/paper/Local-Binary-Patterns-applied-to-Face-Detection-and-L%C3%B3pez/23327db031f6a973640e2aa2afd553ab79788609
+Y2  - 2023/05/23/09:57:18
+L1  - files/6/López - 2010 - Local Binary Patterns applied to Face Detection an.pdf
+L2  - https://www.semanticscholar.org/paper/Local-Binary-Patterns-applied-to-Face-Detection-and-L%C3%B3pez/23327db031f6a973640e2aa2afd553ab79788609
+N1  - <div data-schema-version="8"><p>The aim of this research is exploring the Local Binary Patterns by evaluating classification methods and trying to improve face detection and recognition ratios by trying to eliminate features vector redundancy.</p>
+</div>
+KW  - Facial recognition also explained thouroghly
+KW  - General explaination for Haar
+KW  - Reference 1
+ER  - 
+
+TY  - CONF
+TI  - Intrusion Detection System using Raspberry Pi and Telegram Integration
+AU  - Zuma, Mfundo
+AU  - Owolawi, Pius A.
+AU  - Malele, Vusi
+AU  - Odeyemi, Kehinde
+AU  - Aiyetoro, Gbolahan
+AU  - Ojo, Joseph S.
+T3  - icARTi '21
+AB  - Security is of enormous importance in this modern age. The crime rate increases exponentially, and traditional home surveillance systems are expensive and limited in intelligent capabilities, such as real-time detection, instant alert, and prompt reporting. As a result of the rapid evolution of cutting technologies and devices, such as Raspberry Pi and several enabled APIs, the limitation, as mentioned, has become a thing of the past. This paper implements an Intrusion Detection System (IDS) using a Raspberry Pi processor that serves as a controller and stations at a home environment. The choice of Raspberry Pi 4 is considered, which is the core of the system; it does all processing between all components (i.e., Passive Infrared sensor, Web camera, Light Emitting Diode) connected to it. The intelligent device is integrated with the Telegram bot via its API. The API with the appropriate Telegram framework is used as an instant messenger generator and notification system. The designed system achieved promising results, as it accurately identified known people, and all unidentified people were flagged by sending a Telegram text message, which included the captured image of the unknown intruder. The overall accuracy rate achieved was 84 per cent, and the accuracy rate for known people was 86 per cent.
+C1  - New York, NY, USA
+C3  - Proceedings of the International Conference on Artificial Intelligence and its Applications
+DA  - 2021/12/09/
+PY  - 2021
+DO  - 10.1145/3487923.3487928
+DP  - ACM Digital Library
+SP  - 1
+EP  - 7
+PB  - Association for Computing Machinery
+SN  - 978-1-4503-8575-6
+UR  - https://dl.acm.org/doi/10.1145/3487923.3487928
+Y2  - 2023/05/23/
+L1  - files/8/Zuma et al. - 2021 - Intrusion Detection System using Raspberry Pi and .pdf
+KW  - Facial recognition
+KW  - HOG
+KW  - IoT
+KW  - OpenCV
+KW  - Raspberry Pi
+KW  - Reference 2
+KW  - Telegram
+ER  - 
+
+TY  - CONF
+TI  - Facial Recognition using Machine Learning Algorithms on Raspberry Pi
+AU  - Singh, Seema
+AU  - Ramya, R.
+AU  - Sushma, V.
+AU  - Roshini, S.R.
+AU  - Pavithra, R.
+T2  - 2019 4th International Conference on Electrical, Electronics, Communication, Computer Technologies and Optimization Techniques (ICEECCOT)
+AB  - Facial recognition is a non-invasive method of biometric authentication and useful for numerous applications. The real time implementation of the algorithm with adequate accuracy is required, with hardware timing into consideration. This paper deals with the implementation of machine learning algorithm for real time facial image recognition. Two dominant methods out of many facial recognition methods are discussed, simulated and implemented using Raspberry Pi. A rigorous comparative analysis is presented considering various limitations which may be the case required for innumerable application which utilize facial recognition. The drawbacks and different use cases of each method is highlighted. The facial recognition software uses algorithms to compare a digital image captured through a camera, to the stored face print so as to authenticate a person's identity. The Haar-Cascade method was one of the first methods developed for facial recognition. The HOG (Histogram of Oriented Gradients) method has worked very effectively for object recognition and thus suitable for facial recognition also. Both the methods are compared with Eigen feature-based face recognition algorithm. Various important features are experimented like speed of operation, lighting condition, frontal face profile, side profiles, distance of image, size of image etc. The facial recognition model is implemented to detect and recognize faces in real-time by means of Raspberry Pi and Pi camera for the user defined database in addition to the available databases.
+C3  - 2019 4th International Conference on Electrical, Electronics, Communication, Computer Technologies and Optimization Techniques (ICEECCOT)
+DA  - 2019/12//
+PY  - 2019
+DO  - 10.1109/ICEECCOT46775.2019.9114716
+DP  - IEEE Xplore
+SP  - 197
+EP  - 202
+N1  - <div data-schema-version="8"><p>LBPH and HOG algorithms are explained.</p>
+</div>
+KW  - Comparison
+KW  - Databases
+KW  - Face
+KW  - Face recognition
+KW  - Facial recognition
+KW  - Feature extraction
+KW  - Haar Cascade
+KW  - Histograms
+KW  - HOG
+KW  - Lighting
+KW  - Machine learning algorithms
+KW  - Raspberry Pi
+KW  - Reference 3
+ER  - 
+
+TY  - CONF
+TI  - Facial Detection and Recognition using OpenCV on Raspberry Pi Zero
+AU  - Nagpal, Gagandeep Singh
+AU  - Singh, Gagandeep
+AU  - Singh, Jappreet
+AU  - Yadav, Nishant
+T2  - 2018 International Conference on Advances in Computing, Communication Control and Networking (ICACCCN)
+AB  - In this modern era, security has become a major concern. The amount of criminal activities has increased exponentially over the last three decades. Apart from that, security in places such as airports and railways stations is cumbersome and often ineffective in various cases. The motivation for developing this system was the need for a system to identify suspicious individuals in an time, cost and resource effective manner. In this paper, we discuss a system which consists of a Raspberry Pi Zero connected to a Raspberry Pi camera module, Capacitive touch sensor and OLED display. This system uses Haar Cascade classifier for face detection in an image followed by Local Binary Pattern Histogram for facial Recognition (LBPH). The LBPH algorithm is implemented using OpenCV.
+C3  - 2018 International Conference on Advances in Computing, Communication Control and Networking (ICACCCN)
+DA  - 2018/10//
+PY  - 2018
+DO  - 10.1109/ICACCCN.2018.8748389
+DP  - IEEE Xplore
+SP  - 945
+EP  - 950
+L2  - files/11/8748389.html
+N1  - <div data-schema-version="8"><p>LBPH algorithm is used</p>
+</div>
+KW  - Cameras
+KW  - Classification algorithms
+KW  - Computer Vision
+KW  - Face
+KW  - Face detection
+KW  - Face Detection
+KW  - Face recognition
+KW  - Facial Recognition
+KW  - Feature extraction
+KW  - Histograms
+KW  - Local Binary Pattern Histogram
+KW  - OpenCV
+KW  - Raspberry Pi Zero
+KW  - Reference 4
+ER  - 
+
+TY  - CONF
+TI  - Application of Facial Recognition with PCA and Raspberry Pi for Access Control to Luggage Lockers
+AU  - Mladenova, Tsvetelina
+AU  - Valova, Irena
+AU  - Valov, Nikolay
+T2  - 2021 International Conference Automatics and Informatics (ICAI)
+AB  - The human face is considered to be one of the most used metrics for identification, along with prints and irises. It provides sufficient information for identification.The usage of luggage lockers in supermarkets, ports and shopping malls is a convenience that many customers use. Usually the access to these lockers is controlled by some kind of locking mechanism, e.g. an employee that is responsible for the rent of the lockers, a key mechanism or a locking with a password. While all of these methods work to some extent, we propose a methodology for improvement. The proposed solution is based on Facial Recognition using PCA and Raspberry Pi.
+C3  - 2021 International Conference Automatics and Informatics (ICAI)
+DA  - 2021/09//
+PY  - 2021
+DO  - 10.1109/ICAI52893.2021.9639574
+DP  - IEEE Xplore
+SP  - 141
+EP  - 145
+L2  - files/13/9639574.html
+KW  - cloud database
+KW  - Face recognition
+KW  - facial recognition
+KW  - Feature extraction
+KW  - Informatics
+KW  - lockers
+KW  - Measurement
+KW  - Passwords
+KW  - PCA
+KW  - Principal component analysis
+KW  - Raspberry Pi
+KW  - ref 5
+KW  - Relational databases
+ER  - 
+
+TY  - CONF
+TI  - Face recognition system for access control using principal component analysis
+AU  - Bakshi, Nikita
+AU  - Prabhu, Vibha
+T2  - 2017 International Conference on Intelligent Communication and Computational Techniques (ICCT)
+AB  - In recent years, security systems have become one of the most demanding systems to secure our assets and protect our privacy. A more reliable security system should be developed to avoid losses due to identity theft or fraud. Thus, a lot of researches have been done to improve established security system, especially systems that are based on human identification.” Face recognition system is widely used in human identification process due to its capability to measure and subsequently identify human identification especially for security purposes. The aim of this project is to develop a real-life application of a security lock system using a face recognition method. Principal Component Analysis (PCA) is selected for the face recognition algorithm due to its fast response of recognition process and less sensitiveness to noise and interference. A Graphical User Interface (GUI) is developed for this system and the Arduino microcontroller is used to represent the response to positive face identification. USB serial communication is used to interface between the GUI in MATLAB and Arduino UNO microcontroller as it allows input data transmission from MATLAB to Arduino UNO microcontroller. First, the image of the individual is captured using an integrated webcam. The captured image is then transferred to the database developed in MATLAB. In this stage, the captured image compares to the training image in the database to determine the individual status. If the system recognizes the individual as an authorized person, the signal will be sent to the Arduino UNO microcontroller.
+C3  - 2017 International Conference on Intelligent Communication and Computational Techniques (ICCT)
+DA  - 2017/12//
+PY  - 2017
+DO  - 10.1109/IN℡CCT.2017.8324035
+DP  - IEEE Xplore
+SP  - 145
+EP  - 150
+L2  - files/15/8324035.html
+KW  - Access control
+KW  - Arduino UNO
+KW  - Face
+KW  - Face recognition
+KW  - Face Recognition
+KW  - Feature extraction
+KW  - MATLAB
+KW  - Principal component analysis
+KW  - Principal Component Analysis
+KW  - ref 6
+KW  - Training
+ER  - 
+
+TY  - ELEC
+TI  - A comparison of facial recognition’s algorithms
+AU  - Delbiaggio, Nicolas
+AB  - The popularity of the cameras in smart gadgets and other consumer electronics drive the industries to utilize these devices more efficiently. Facial recognition research is one of the hot topics both for practitioners and academicians nowadays. This study is an attempt to reveal the efficiency of existing facial recognition algorithms through a case evaluation.
+
+The purpose of this thesis is to investigate several facial recognition algorithms and make comparisons in respect of their accuracy. The compared facial recognitions algorithms have been widely utilized by industries. The focus is on the algorithms, Eigenfaces, Fisherfaces, Local Binary Pattern Histogram, and the commercial deep convolutional neural network algorithm OpenFace. The thesis covers the whole process of face recognition, including preprocessing of images and face detection. The concept of each algorithm is explained, and the description is given accordingly. Additionally, to assess the efficiency of each algorithm a test case with static images was conducted and evaluated.
+
+The evaluations of the test cases indicate that among the compared facial recognition algorithms the OpenFace algorithm has the highest accuracy to identify faces.
+
+Through the findings of this study, we aim to conduct further researches on emotional analysis through facial recognition.
+DA  - 2017///
+PY  - 2017
+LA  - en
+M3  - fi=AMK-opinnäytetyö|sv=YH-examensarbete|en=Bachelor's thesis|
+UR  - http://www.theseus.fi/handle/10024/132808
+Y2  - 2023/05/25/11:33:56
+L1  - files/17/Delbiaggio - 2017 - A comparison of facial recognition’s algorithms.pdf
+N1  - <div data-schema-version="8"><p>Results very similar to the ones i got they are based on the same system although it uses a better camera, other hardware is not mentioned as in soc.</p>
+</div>
+KW  - not similar setup although sdimilar experiment
+KW  - results Ref 7
+KW  - Very close experiment use results
+ER  - 
+
